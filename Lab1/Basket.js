@@ -58,11 +58,10 @@ var basket = (function(){
 		},
 		removeProduct : function(productID){
 			var indexProduct = getIndexProduct(productID);
-			if(product == null) {
+			if(indexProduct == null) {
 				alert("Ви ще не вибрали цей продукт!");
 			} else {
-				var product = a[indexProduct];
-				product.getProduct().inventory += + product.getAmount();
+				a[indexProduct].getProduct().inventory +=  a[indexProduct].getAmount();
 				delete a[indexProduct];
 			}
 		},
